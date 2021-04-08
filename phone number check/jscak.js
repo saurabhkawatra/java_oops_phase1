@@ -1,3 +1,4 @@
+/*
 function cak()
 {
 
@@ -21,3 +22,4 @@ m[0]="String length=";m[1]=s.length;m[2]="No of digits in string=";m[3]=nc;
 n=m.join(" ");
 document.getElementById("span0").textContent=n;
 }
+*/
