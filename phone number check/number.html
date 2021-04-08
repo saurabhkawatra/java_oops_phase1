@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>phone number check</title>
+<script type="text/javascript" src="jscak.js">
+</script>
+<script type="text/javascript">
+function cak1()
+{
+
+var nc=0,s,i;
+var m=new Array(),n;
+
+s=document.getElementById("ph1").value;
+
+for(i=0;i<s.length;i++)
+if(s.charAt(i)==0||s.charAt(i)==1||s.charAt(i)==2||s.charAt(i)==3||s.charAt(i)==4||s.charAt(i)==5||s.charAt(i)==6||s.charAt(i)==7||s.charAt(i)==8||s.charAt(i)==9)
+nc++;
+
+if(s.length==10&&nc==10)
+document.getElementById("sp1").textContent="Valid number";
+if(s.length!=nc)
+document.getElementById("sp1").textContent="only digits allowed in phone number";
+if(s.length==nc&&nc!=10)
+document.getElementById("sp1").textContent="phone no should be 10 digits";
+
+m[0]="String length=";m[1]=s.length;m[2]="No of digits in string=";m[3]=nc;
+n=m.join(" ");
+document.getElementById("sp0").textContent=n;
+}
+</script>
+</head>
+
+<body>
+<p>Enter the phone number</p>
+<input type="text" onkeyup="cak()" id="ph"><br>
+<span id="span0"></span>
+<br><br><br>
+
+<table border=1 align="left">
+<tr>
+<td bgcolor="silver" rowspan="2">Validity</td>
+<td align="center"><input type="button" value="check number" onclick="cak()"></td>
+</tr>
+
+<tr>
+<td bgcolor="yellow" align="center" width=200 height=40><span id="span"></span></td>
+</tr>
+</table><br><br><br><br>
+--------------------------------------------------------------------------
+<p>Enter the phone number</p>
+<input type="text" id="ph1"><br>
+<span id="sp0"></span>
+<br><br><br>
+
+<table border=1 align="left">
+<tr>
+<td bgcolor="silver" rowspan="2">Validity</td>
+<td align="center"><input type="button" value="check number" onclick="cak1()"></td>
+</tr>
+
+<tr>
+<td bgcolor="yellow" align="center" width=200 height=40><span id="sp1"></span></td>
+</tr>
+</table>
+
+
+</body>
+</html>
+
