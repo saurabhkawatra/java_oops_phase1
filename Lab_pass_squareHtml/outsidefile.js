@@ -2,7 +2,7 @@ function check()
 {
 var m= document.getElementById("os").value;
 if(m=="ra")
-   alert("correct password is "+m);
+   alert("you entered the correct password, which is '"+m+"'");
  else
        alert("incorrect");
 
