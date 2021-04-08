@@ -1,7 +1,7 @@
 function check()
 {
 var m= document.getElementById("os").value;
-if(m=="r")
+if(m=="ra")
    alert("correct password is "+m);
  else
        alert("incorrect");
