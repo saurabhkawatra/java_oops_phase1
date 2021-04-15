@@ -1,7 +1,5 @@
-import java.awt.datatransfer.SystemFlavorMap;
 import java.util.*;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 public class stringarraypractise {
 
