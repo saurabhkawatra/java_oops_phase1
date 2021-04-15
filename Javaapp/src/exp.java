@@ -15,7 +15,7 @@ public class exp
     	
         int N = (int) Math.pow(2, S.length),c=0;
         int[] buf=new int[S.length];
-        int[][][] x=new int[100][100][100];
+        int[][][] x=new int[1000][1000][1000];
         
         for(int r=1;r<=S.length;r++)
         {
@@ -25,16 +25,14 @@ public class exp
                            c=0;
                            for (int j = 0; j < S.length; j++)
                                 {
-                                 // if j'th bit of `i` is set, print `S[j]`
                                   if ((i & (1 << j)) != 0) {
-                                 buf[c]=S[j];System.out.print(S[j] + " ");c++;
+                                 buf[c]=S[j];c++;
                                  }
                                 }
                          if(c==r)
                          { for(int z=0;z<c;z++)
                          x[r][ca][z]=buf[z];
                          ca++;}
-                         System.out.println();
             
                        }
         }
@@ -53,7 +51,7 @@ public class exp
  
     public static void main(String[] args)
     {
-       int[] S = { 1, 2, 3, 4 };
+       int[] S = { 1, 2, 3, 4, 5, 6, 7, 8 };
        findPowerSet(S);
     	int f=4,z;
     	z=exp.fact(f);

@@ -1,17 +1,17 @@
 import java.util.*;
 public class ncr {
 	
-	double[] num= new double[50],numf;
+	int[] num= new int[50],numf;
 	int count;
 	
 	void getnum()
 	{
 		int i=0;
-		double x;
+		int x;
 		Scanner s = new Scanner(System.in);
 		while(true)
 		{ 
-			x=s.nextDouble();
+			x=s.nextInt();
 			if(x!=0)
 			{num[i]=x;i++;count=i;}
 			else
@@ -19,7 +19,7 @@ public class ncr {
 		}
 		s.close();
 		
-		numf=new double[count];
+		numf=new int[count];
 		for(i=0;i<count;i++)
 			numf[i]=num[i];
 	}
@@ -37,27 +37,7 @@ public class ncr {
             System.out.println("Enter the Array");
             c.getnum();
             c.disp();
-            setsofncr.main(c.numf);
+            exp.findPowerSet(c.numf);
 	}
 
-}
-
- class setsofncr{
-public static void main(double[] s)
-{
-double sets[][]=new double[100][100];
-int ncr;
-
-for(int nofele=1;nofele<=s.length;nofele++)
-{
-          for(int ele=1;ele<=s.length;ele++)
-          {
-        	  if(ele>nofele) break;
-        	  sets[nofele][ele]=s[0];
-          }
-           
-	         
-}
-
-}
 }
