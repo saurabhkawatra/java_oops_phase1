@@ -1,4 +1,5 @@
 import java.io.*;
+import java.time.LocalTime;
 import java.net.*;
 import java.util.*;
 public class readfromtxtfile {
@@ -9,6 +10,9 @@ public class readfromtxtfile {
 		URL f=new URL("https://github.com/saurabhkawatra/java_oops_phase1/raw/master/Java.txt");
 		BufferedReader bfr=new BufferedReader(new InputStreamReader(f.openStream()));
 	     String i,j;
+	     String k="this is text file\r\n"
+	     		+ "these are new changes\r\n"
+	     		+ "these are new changes 2";
 	     String[] word;
 	     int numwords=0;
 	     j=bfr.readLine();
@@ -26,7 +30,8 @@ public class readfromtxtfile {
 	     System.out.println(j);
 	     bfr.close();
 	     
-	     if(j.matches("this(.*)"))
+	     
+	     if(k.matches("(.)*"))
 	    	numwords++;
 	     System.out.println(numwords);
 	     
@@ -40,6 +45,10 @@ public class readfromtxtfile {
 		}
 		catch(Exception e)
 		{System.out.println(e);}
+		
+		LocalTime lt= LocalTime.now();
+		System.out.println(lt);
+		
 	}
 
 }
