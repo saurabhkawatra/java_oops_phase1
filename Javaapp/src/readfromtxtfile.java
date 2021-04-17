@@ -31,7 +31,7 @@ public class readfromtxtfile {
 	     bfr.close();
 	     
 	     
-	     if(k.matches("(.)*"))
+	     if(j.matches("[(.)*|(\n)*|(\r)*]*"))
 	    	numwords++;
 	     System.out.println(numwords);
 	     
