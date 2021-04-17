@@ -38,7 +38,7 @@ public class readfromtxtfile {
 	     word=j.split("\\s");//splits the strings based on whitespace
          System.out.println("using split All words in your sentence are:");
          for(String x:word)
-       	  System.out.println(x);
+       	 System.out.println(x);
          
 		System.out.println(word);
 		System.out.println(j);
