@@ -20,9 +20,9 @@ public class math {
 		System.out.print("Enter the value of a\n");
 		a[i]=sc.nextInt();if(a[i]<0||a[i]>50) {System.out.println("a should be betweeen 0 and 50\n");er++;break;};
 		System.out.println("Enter the value of b");
-		b[i]=sc.nextInt();if(b[i]<0||b[i]>50) {System.out.println("b should be betweeen 0 and 50\n");er++;break;};;
+		b[i]=sc.nextInt();if(b[i]<0||b[i]>50) {System.out.println("b should be betweeen 0 and 50\n");er++;break;};
 		System.out.println("Enter the value of n");
-		n[i]=sc.nextInt();if(n[i]<1||n[i]>15) {System.out.println("n should be betweeen 1 and 15\n");er++;break;};;
+		n[i]=sc.nextInt();if(n[i]<1||n[i]>15) {System.out.println("n should be betweeen 1 and 15\n");er++;break;};
 		}
 		if(er==0)
 		c++;
