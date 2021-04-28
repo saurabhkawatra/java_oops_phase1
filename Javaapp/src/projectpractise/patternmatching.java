@@ -1,7 +1,10 @@
 package projectpractise;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Stack;
 import java.util.regex.Pattern;
+import java.io.File;
 
 public class patternmatching {
 	
@@ -43,6 +46,30 @@ public static void main(String[] args)
     	System.out.println(e);
     }
     System.out.printf("|%15s| |%5s| |%15s| ",a,b,c);
+    
+    Stack<Integer> ss=new Stack<>();
+    
+    File ino=new File("C:\\Users\\saura\\Desktop\\New folder (2)");
+    File[] filesinsideino=ino.listFiles();
+    for(File e:filesinsideino)
+    {
+    	String filename=e.getName();
+    	String directory=e.getAbsolutePath();
+    	long filesize=e.length();
+    	String type="";
+    	if(e.isDirectory())
+    		type="Folder/directory";
+    	else
+    	{
+    		String tempname;
+    		tempname=e.getName();
+    		String[] typeexe;
+    	    typeexe=tempname.split("[.]");
+    	    type=typeexe[typeexe.length-1];
+    	}
+    	//System.out.println("File Name: "+filename+"\tFile type: "+type+"\tFile size: "+filesize+"Location: "+directory);
+    	System.out.println("\tFile type: "+type+"\t\tFile size: "+filesize);
+    }
     
 }
 }
