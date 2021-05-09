@@ -35,6 +35,13 @@ class server_outgoingmessages
 					//System.out.println(n+" has left");
 					clientsocketlist.remove(csc);
 					System.out.println(csc.clientname+" has left the chat");
+					try {
+						outgoingmessageforall(csc.clientname+" has left the chat",null);
+					}catch(Exception exe)
+					{
+						//exe.printStackTrace();
+						//System.out.println(exe);
+					}
 				}
 			}
 		}
