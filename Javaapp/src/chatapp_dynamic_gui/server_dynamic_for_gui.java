@@ -33,9 +33,9 @@ class server_outgoingmessages
 					//String n=outforall.substring(0,outforall.indexOf(58)+1);
 					//System.out.println(n+" has left");
 					clientsocketlist.remove(csc);
-					System.out.println(csc.clientname+" has left the chat");
+					System.out.println("\n\t\t"+csc.clientname+" has left the chat\n");
 					try {
-						outgoingmessageforall(csc.clientname+" has left the chat",null);
+						outgoingmessageforall("\n\t\t"+csc.clientname+" has left the chat\n",null);
 					}catch(Exception exe)
 					{
 						//exe.printStackTrace();
@@ -139,9 +139,9 @@ public class server_dynamic_for_gui {
 					    System.out.println(clientsocket.getPort()+" client connected");
 					    br1=new BufferedReader(new InputStreamReader(clientsocket.getInputStream()));
 					    clientname=br1.readLine();
-					    System.out.println(clientname+" has joined the chat");
+					    System.out.println("\n\t\t"+clientname+" has joined the chat\n");
 					    try {
-					    	server_outgoingmessages.outgoingmessageforall(clientname+" has joined the chat",null);
+					    	server_outgoingmessages.outgoingmessageforall("\n\t\t"+clientname+" has joined the chat\n",null);
 					    }catch(Exception e)
 					    {
 					    	//e.printStackTrace();

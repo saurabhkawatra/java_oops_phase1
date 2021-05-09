@@ -196,13 +196,6 @@ public class client_dynamic_gui {
 						
 							String ipmessage;
 							ipmessage=br.readLine();
-							if(ipmessage.equalsIgnoreCase("exit")|ipmessage.equalsIgnoreCase("quit"))
-							{
-								System.out.println("Server Quit");
-								break;
-							}
-							//System.out.println("Server: "+ipmessage);
-							System.out.println(ipmessage);
 							displayarea.append(ipmessage+"\n");
 							displayarea.setCaretPosition(displayarea.getDocument().getLength());
 							
