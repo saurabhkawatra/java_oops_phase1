@@ -7,15 +7,26 @@ class sorting
 	static double getFolderSize(File dir)
 	{
 		File[] files=dir.listFiles();
-		double size;
-		if()
+		double size=0;
+		if(files==null)
+			return dir.length();
+		for(File e:files)
+		{
+			if(e.isDirectory())
+				size=size+getFolderSize(e);
+			else
+				size=size+e.length();
+		}
+		return(size);
 	}
 
 		public static void main(String[] args)
 		{
-			File file=new File("C:\\Users\\iphre\\OneDrive\\Pictures\\Screenshots");
+			File file=new File("C:\\Users\\saura\\Desktop\\New folder (2)");
 		
 			File[] fa = file.listFiles();
+			if(fa!=null)
+			{
 			String[] fname=new String[fa.length]; 
 				
 			for(int i=0;i<fa.length;i++)
@@ -94,6 +105,10 @@ class sorting
 		
 			}
 		
-		
+		  }
+			else
+			{
+				System.out.println("Given directory is an empty directory");
+			}
 		}
 }

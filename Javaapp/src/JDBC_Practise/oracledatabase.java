@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class employee{
+class employee {
 	private int emp_id;
 	private String Name;
 	private int salary;
@@ -61,15 +61,23 @@ public class oracledatabase {
 			{
 				System.out.printf("\n%-6s %-30s %-30s",rs.getInt(1),rs.getString(2),rs.getInt(3));
 			}
-			System.out.println("\n\nCreate new entry for the table Employee");
-			System.out.print("Enter the Emp_id:- ");temp=sc.nextLine();
-			emp_id=Integer.parseInt(temp);
-			System.out.print("\nEnter the Employee Name:- ");Employeename=sc.nextLine();
-			System.out.println("\nEnter Employee's Salary:- ");temp=sc.nextLine();
-			Salary=Integer.parseInt(temp);
-			System.out.println("insert into Employee (Emp_Id,EmployeeName,Salary) values ("+emp_id+",'"+Employeename+"',"+Salary+")");
+			System.out.println("\n\nWould you like to add an entry to the employee list");
+			System.out.println(" Yes or No ");
+			String in=sc.nextLine();
+			if(in.matches("[Y|y][e|E][s|S]"))
+			{
+				System.out.println("\n\nCreate new entry for the table Employee");
+				System.out.print("Enter the Emp_id:- ");temp=sc.nextLine();
+				emp_id=Integer.parseInt(temp);
+				System.out.print("\nEnter the Employee Name:- ");Employeename=sc.nextLine();
+				System.out.println("\nEnter Employee's Salary:- ");temp=sc.nextLine();
+				Salary=Integer.parseInt(temp);
+				System.out.println("insert into Employee (Emp_Id,EmployeeName,Salary) values ("+emp_id+",'"+Employeename+"',"+Salary+")");
+				
+				stmt.executeUpdate("insert into Employee (Emp_Id,EmployeeName,Salary) values ("+emp_id+",'"+Employeename+"',"+Salary+")");
+				
+			}
 			
-			stmt.executeUpdate("insert into Employee (Emp_Id,EmployeeName,Salary) values ("+emp_id+",'"+Employeename+"',"+Salary+")");
 			
 			System.out.println();
 			System.out.println("\nTable Employee :-");
