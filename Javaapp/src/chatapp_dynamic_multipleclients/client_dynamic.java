@@ -18,12 +18,12 @@ public class client_dynamic {
 	public client_dynamic()
 	{
 		try {
-			while(clienttoserversocket==null|!clienttoserversocket.isConnected())
+			while(clienttoserversocket==null||!clienttoserversocket.isConnected())
 			{
 				try {
 					System.out.println("Requesting server connection....");
-					clienttoserversocket=new Socket("122.171.26.166",7777);
-					//clienttoserversocket=new Socket("127.0.0.1",7777);
+					//clienttoserversocket=new Socket("122.171.26.166",7777);
+					clienttoserversocket=new Socket("127.0.0.1",7777);
 					System.out.println("Connection Established");
 					System.out.println("You are now connected to Saurabh (Server)");
 					
