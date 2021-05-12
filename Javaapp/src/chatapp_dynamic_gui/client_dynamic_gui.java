@@ -43,8 +43,8 @@ public class client_dynamic_gui {
 	{
 		gui();
 		
-		displayarea.append("Client started...\n");
-		displayarea.setCaretPosition(displayarea.getDocument().getLength());
+		//displayarea.append("Client started...\n");
+		//displayarea.setCaretPosition(displayarea.getDocument().getLength());
 		
 		try {
 			while(clienttoserversocket==null||!clienttoserversocket.isConnected())
@@ -196,6 +196,11 @@ public class client_dynamic_gui {
 						
 							String ipmessage;
 							ipmessage=br.readLine();
+							if(ipmessage.equalsIgnoreCase("exit")|ipmessage.equalsIgnoreCase("quit"))
+							{
+								System.out.println("Server Quit");
+								break;
+							}
 							displayarea.append(ipmessage+"\n");
 							displayarea.setCaretPosition(displayarea.getDocument().getLength());
 							
