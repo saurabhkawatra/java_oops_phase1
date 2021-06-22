@@ -1,4 +1,4 @@
-package chatapp_dynamic_gui;
+
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -119,8 +119,8 @@ public class client_dynamic_gui_shabby extends client_gui_frame{
 								System.out.println("old connection closing-->"+exe);
 							}
 							try {
-								//clienttoserversocket=new Socket("122.171.26.166",7777);
-								clienttoserversocket=new Socket("127.0.0.1",7777);
+								clienttoserversocket=new Socket("122.171.26.166",7777);
+								//clienttoserversocket=new Socket("127.0.0.1",7777);
 								System.out.println("Connected!");
 								displayarea.append("Connected!\n\n");
 								displayarea.setCaretPosition(displayarea.getDocument().getLength());
