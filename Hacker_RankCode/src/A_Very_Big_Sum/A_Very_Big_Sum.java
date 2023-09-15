@@ -32,13 +32,14 @@ public class A_Very_Big_Sum {
 			if(operand1.length()==1)
 				operand1="0";
 			else
-			operand1=operand1.substring(0, operand1.length()-1);
+				operand1=operand1.substring(0, operand1.length()-1);
 			if(operand2.length()==1)
 				operand2="0";
 			else
 				operand2=operand2.substring(0, operand2.length()-1);
 			
 			loopcounter--;
+			if(loopcounter==0&&carry!=0) {reverseanswer=reverseanswer.concat(String.valueOf(carry));}
 		}
 		
 		for(int i=0;i<reverseanswer.length();i++) {

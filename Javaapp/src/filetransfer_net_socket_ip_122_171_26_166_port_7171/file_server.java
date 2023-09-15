@@ -1,6 +1,7 @@
 package filetransfer_net_socket_ip_122_171_26_166_port_7171;
 
 import java.io.BufferedReader;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,7 +29,7 @@ public class file_server {
 		List<Socket> socketlist=new ArrayList<>();
 		try {
 			br=new BufferedReader(new InputStreamReader(new FileInputStream(
-					new File("C:\\Users\\saura\\Desktop\\html experiments\\lab.html"))));
+					new File("D:\\Desktop\\html experiments\\lab.html"))));
 			
 			server=new ServerSocket(7171);
 			
@@ -49,7 +50,7 @@ public class file_server {
 					System.out.println("Client added");
 					
 					br=new BufferedReader(new InputStreamReader(new FileInputStream(
-							new File("C:\\Users\\saura\\Desktop\\html experiments\\lab.html"))));
+							new File("D:\\Desktop\\html experiments\\lab.html"))));
 					
 					wbr=new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 					wbr.write("HTTP/1.1 200 OK");
